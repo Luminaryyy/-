@@ -6,7 +6,7 @@ using namespace std;
 
 double function(double x)
 {
-	return abs(x * x - 8);
+	return x * x - 8;
 }
 
 void left_rectangle_method(double integration_range1, double integration_range2)
