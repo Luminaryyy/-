@@ -3,6 +3,8 @@
 #include <math.h>
 using namespace std;
 
+
+
 double function(double x)
 {
 	return x * x - 8;
