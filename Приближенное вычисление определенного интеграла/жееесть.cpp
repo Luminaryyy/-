@@ -15,6 +15,7 @@ void left_rectangle_method(double integration_range1, double integration_range2)
 	double step, n;
 	cout << "Введите число итераций:\n";
 	cin >> n;
+	n = fabs(n);
 	step = (integration_range2 - integration_range1) / n;
 
 	double result = 0;
@@ -32,6 +33,7 @@ void medium_rectangle_method(double integration_range1, double integration_range
 	double step, n;
 	cout << "Введите число итераций:\n";
 	cin >> n;
+	n = fabs(n);
 	step = (integration_range2 - integration_range1) / n;
 
 	double result = 0;
@@ -49,6 +51,7 @@ void right_rectangle_method(double integration_range1, double integration_range2
 	double step, n;
 	cout << "Введите число итераций:\n";
 	cin >> n;
+	n = fabs(n);
 	step = (integration_range2 - integration_range1) / n;
 
 	double result = 0;
@@ -81,6 +84,7 @@ void trapezoid_method(double integration_range1, double integration_range2)
 	double step, n;
 	cout << "Введите число итераций:\n";
 	cin >> n;
+	n = fabs(n);
 	step = (integration_range2 - integration_range1) / n;
 
 	double result = function(integration_range1) + function(integration_range2);
@@ -100,6 +104,7 @@ void Simpson_method(double integration_range1, double integration_range2)
 	int k;
 	cout << "Введите число итераций:\n";
 	cin >> n;
+	n = fabs(n);
 	step = (integration_range2 - integration_range1) / n;
 
 	double result = function(integration_range1) + function(integration_range2);
@@ -118,11 +123,6 @@ int main()
 	
 	int x = 0;
 
-	cout << "Выберите способ для вычисления интеграла:\n" << "Формула прямоугольников - 1\n" << "Формула трапеции - 2\n" << "Формула Симпсона - 3\n" << "Для выхода - 0\n";
-
-	int choice_method;
-	cin >> choice_method;
-
 	cout << "Введите нижний предел интегрирования:\n";
 	double integration_range1;
 	cin >> integration_range1;
@@ -130,6 +130,11 @@ int main()
 	cout << "Введите верхний предел интегрирования:\n";
 	double integration_range2;
 	cin >> integration_range2;
+
+	cout << "Выберите способ для вычисления интеграла:\n" << "Формула прямоугольников - 1\n" << "Формула трапеции - 2\n" << "Формула Симпсона - 3\n" << "Для выхода - 0\n";
+
+	int choice_method;
+	cin >> choice_method;
 
 	switch (choice_method)
 	{
