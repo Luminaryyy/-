@@ -144,5 +144,4 @@ int main()
 	default: printf("Ошибка ввода!!!\n");
 	}
 
-
 }
